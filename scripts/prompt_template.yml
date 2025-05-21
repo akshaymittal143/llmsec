@@ -1,0 +1,17 @@
+security_check:
+  template: |
+    Analyze the following {resource_type} configuration for security issues.
+    Focus on {policy_focus}.
+    Configuration:
+    {config}
+    
+    Provide:
+    1. Security assessment (SECURE/INSECURE)
+    2. Confidence score (0.0-1.0)
+    3. Specific violations found
+    4. Remediation steps
+
+validation_prompts:
+  - "Verify if this configuration follows security best practices"
+  - "Check for compliance with CIS Benchmark requirements"
+  - "Analyze potential security vulnerabilities in this configuration"

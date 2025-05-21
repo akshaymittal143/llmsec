@@ -1,0 +1,15 @@
+models:
+  gpt4:
+    version: "gpt-4-0314"
+    temperature: 0.1
+    max_tokens: 500
+    timeout_seconds: 30
+  llama:
+    model_path: "codellama-7b-hf"
+    retrieval_index: "cis-benchmark-v1.8"
+    quantization: "4bit"
+    
+ensemble:
+  confidence_threshold: 0.8
+  voting_threshold: 2  # majority of 3
+  max_latency_ms: 3500
